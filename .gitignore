@@ -18,3 +18,7 @@ InteractivePiano.iml
 
 out/
 build_piano.xml
+
+.gradle/
+build/*
+!build/libs
