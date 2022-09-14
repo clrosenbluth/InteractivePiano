@@ -13,6 +13,8 @@ Helen Sutton https://github.com/HelenSutton
 
 Kaila Minkowitz https://github.com/kailamink
 
+Sara Stavnitser https://github.com/sarastavnitser
+
 Original Multi-client piano app written by Miriam and Aviva
 
 Known issues
