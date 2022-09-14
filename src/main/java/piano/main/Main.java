@@ -13,7 +13,7 @@ public class Main {
             MidiChannel midiChannel = new Channel().getChannel();
             PianoGUI frame = new PianoGUI(midiChannel, new Recorder());
             frame.setVisible(true);
-            new Intro().playIntro(midiChannel);
+            //new Intro().playIntro(midiChannel);
         } catch (MidiUnavailableException e) {
             e.printStackTrace();
         }
