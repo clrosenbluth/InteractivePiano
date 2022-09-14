@@ -13,6 +13,8 @@ Helen Sutton https://github.com/HelenSutton
 
 Kaila Minkowitz https://github.com/kailamink
 
+Chana Levy https://github.com/clrosenbluth
+
 Miriam Dreyfuss https://github.com/MDreyfuss
 
 Sara Yaffe https://github.com/SaraYaffe
