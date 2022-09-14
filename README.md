@@ -15,6 +15,8 @@ Kaila Minkowitz https://github.com/kailamink
 
 Sara Yaffe https://github.com/SaraYaffe
 
+Chaya Haor https://github.com/chayahaor
+
 Original Multi-client piano app written by Miriam and Aviva
 
 Known issues
