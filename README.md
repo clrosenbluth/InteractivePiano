@@ -21,6 +21,8 @@ Sara Yaffe https://github.com/SaraYaffe
 
 Chaya Haor https://github.com/chayahaor
 
+Rachel Nemesure https://github.com/RachelRebecca
+
 Original Multi-client piano app written by Miriam and Aviva
 
 Known issues
