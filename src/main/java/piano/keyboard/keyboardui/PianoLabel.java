@@ -3,7 +3,7 @@ package piano.keyboard.keyboardui;
 import piano.keyboard.keyboardaudio.Key;
 import piano.main.MainFrameInterface;
 
-import java.awt.Color;
+import java.awt.*;
 import javax.swing.JLabel;
 
 public class PianoLabel extends JLabel
@@ -29,6 +29,11 @@ public class PianoLabel extends JLabel
 		this.key = key;
 		setOpaque(true);
 		setBackground(defaultColor);
+
+		setVerticalAlignment(JLabel.CENTER);
+		setHorizontalAlignment(JLabel.CENTER);
+		setText(key.getName());
+		setForeground(Color.gray);
 	}
 
 	public void setColorToDefaultColor() {
