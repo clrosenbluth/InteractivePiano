@@ -1,17 +1,17 @@
 InteractivePiano
 ================
 
-Piano Synthesizer code written for MCO-364 with students:
+Piano Sy
+Helen Sutton https://github.com/HelenSutton
+
+Kaila Minkowitz https://github.com/kailamink
+nthesizer code written for MCO-364 with students:
 
 Ayelet Buchen https://github.com/ayeletbuchen
 
 Sarah Bracha Schuraytz https://github.com/sschuraytz
 
 Esther Gassner https://github.com/esthergassner
-
-Helen Sutton https://github.com/HelenSutton
-
-Kaila Minkowitz https://github.com/kailamink
 
 Sara Stavnitser https://github.com/sarastavnitser
 
