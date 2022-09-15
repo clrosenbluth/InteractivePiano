@@ -4,12 +4,20 @@ import javax.sound.midi.MidiChannel;
 
 public class Key
 {
+	String[] noteNames = new String[] { "C", "C#/Db", "D", "D#/Eb", "E", "F", "F#/Gb", "G", "G#/Ab", "A", "A#/Bb", "B" };
+
 	private int pitch;
+	private String name;
 	private MidiChannel midiChannel;
 
 	public Key(int position, MidiChannel midiChannel) {
 		pitch = position + Notes.startingC;
+		this.name = noteNames[pitch % 12];
 		this.midiChannel = midiChannel;
+	}
+
+	public String getName() {
+		return this.name;
 	}
 
 	public void play() {
