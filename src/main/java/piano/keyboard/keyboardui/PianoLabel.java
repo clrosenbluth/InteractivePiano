@@ -11,8 +11,10 @@ public class PianoLabel extends JLabel
 	private Key key;
 	private Color defaultColor; // color of key when NOT clicked
 	private Color colorOnClick; // color of key when clicked
+	private final boolean shouldShowText;
 
-	public PianoLabel(Color defaultColor, Color colorOnClick, Key key) {
+	public PianoLabel(Color defaultColor, Color colorOnClick, Key key, boolean shouldShowText) {
+		this.shouldShowText = shouldShowText;
 		if (defaultColor == Color.WHITE || defaultColor == Color.BLACK) {
 			createPianoLabel(defaultColor, colorOnClick, key);
 		}
@@ -32,8 +34,11 @@ public class PianoLabel extends JLabel
 
 		setVerticalAlignment(JLabel.CENTER);
 		setHorizontalAlignment(JLabel.CENTER);
-		setText(key.getName());
-		setForeground(Color.gray);
+		setForeground(Color.GRAY);
+
+		if (this.shouldShowText) {
+			setText(key.getName());
+		}
 	}
 
 	public void setColorToDefaultColor() {

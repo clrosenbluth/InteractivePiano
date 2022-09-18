@@ -9,15 +9,17 @@ import javax.swing.*;
 import java.awt.*;
 
 public class Keyboard extends JLayeredPane {
-    private Colors colors;
-    private MidiChannel midiChannel;
-    private Recorder recorder;
+    private final Colors colors;
+    private final MidiChannel midiChannel;
+    private final Recorder recorder;
     private final int BACK_LAYER = 0;
     private final int FRONT_LAYER = 1;
+    private boolean shouldShowText;
 
-    public Keyboard(MidiChannel midiChannel, Recorder recorder) {
+    public Keyboard(MidiChannel midiChannel, Recorder recorder, boolean shouldShowText) {
         this.midiChannel = midiChannel;
         this.recorder = recorder;
+        this.shouldShowText = shouldShowText;
         colors = new Colors();
 
         setSize(MainFrameInterface.KEYBOARD_WIDTH, MainFrameInterface.KEYBOARD_HEIGHT);
@@ -25,6 +27,15 @@ public class Keyboard extends JLayeredPane {
 
         addWhitePianoLabels();
         addBlackPianoLabels();
+    }
+
+    public void setShouldShowText(boolean value) {
+        if (this.shouldShowText != value) {
+            this.shouldShowText = value;
+            removeAll();
+            addWhitePianoLabels();
+            addBlackPianoLabels();
+        }
     }
 
     private void addWhitePianoLabels() {
@@ -65,7 +76,7 @@ public class Keyboard extends JLayeredPane {
     }
 
     private void addPianoLabel(Color color, int index, int placement) {
-        PianoLabel pianoLabel = new PianoLabel(color, colors.getColor(index), new Key(index, midiChannel));
+        PianoLabel pianoLabel = new PianoLabel(color, colors.getColor(index), new Key(index, midiChannel), this.shouldShowText);
         pianoLabel.setLocation(placement, 0);
         pianoLabel.addMouseListener(new KeyListener(recorder));
 
