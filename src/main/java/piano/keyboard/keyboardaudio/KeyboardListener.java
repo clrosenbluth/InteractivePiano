@@ -41,7 +41,7 @@ public class KeyboardListener implements KeyListener {
             pianoLabel.setColorToDefaultColor();
         }
     }
-    private static int getPosition(char key) {
+    private int getPosition(char key) {
         int labelIndex = switch (key) {
             case '1' -> 0;
             case '!' -> 21;
