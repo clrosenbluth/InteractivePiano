@@ -16,8 +16,7 @@ public class Keyboard extends JLayeredPane {
     private Recorder recorder;
     private final int BACK_LAYER = 0;
     private final int FRONT_LAYER = 1;
-
-    public List<PianoLabel> pianoLabelList = new ArrayList<PianoLabel>();
+    private List<PianoLabel> pianoLabelList = new ArrayList<>();
 
     public Keyboard(MidiChannel midiChannel, Recorder recorder) {
         this.midiChannel = midiChannel;
@@ -81,5 +80,8 @@ public class Keyboard extends JLayeredPane {
 
         add(pianoLabel);
         pianoLabelList.add(pianoLabel);
+    }
+    public List<PianoLabel> getPianoLabelList() {
+        return pianoLabelList;
     }
 }
