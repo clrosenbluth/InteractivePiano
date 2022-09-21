@@ -42,119 +42,45 @@ public class KeyboardListener implements KeyListener {
         }
     }
     private static int getPosition(char key) {
-        int labelIndex;
-        switch (key) {
-            case '1':
-                labelIndex = 0;
-                break;
-            case '!':
-                labelIndex = 21;
-                break;
-            case '2':
-                labelIndex = 1;
-                break;
-            case '@':
-                labelIndex = 22;
-                break;
-            case '3':
-                labelIndex = 2;
-                break;
-            case '4':
-                labelIndex = 3;
-                break;
-            case '$':
-                labelIndex = 23;
-                break;
-            case '5':
-                labelIndex = 4;
-                break;
-            case '%':
-                labelIndex = 24;
-                break;
-            case '6':
-                labelIndex = 5;
-                break;
-            case '^':
-                labelIndex = 25;
-                break;
-            case '7':
-                labelIndex = 6;
-                break;
-            case '8':
-                labelIndex = 7;
-                break;
-            case '*':
-                labelIndex = 26;
-                break;
-            case '9':
-                labelIndex = 8;
-                break;
-            case '(':
-                labelIndex = 27;
-                break;
-            case '0':
-                labelIndex = 9;
-                break;
-            case 'q':
-                labelIndex = 10;
-                break;
-            case 'Q':
-                labelIndex = 28;
-                break;
-            case 'w':
-                labelIndex = 11;
-                break;
-            case 'W':
-                labelIndex = 29;
-                break;
-            case 'e':
-                labelIndex = 12;
-                break;
-            case 'E':
-                labelIndex = 30;
-                break;
-            case 'r':
-                labelIndex = 13;
-                break;
-            case 't':
-                labelIndex = 14;
-                break;
-            case 'T':
-                labelIndex = 31;
-                break;
-            case 'y':
-                labelIndex = 15;
-                break;
-            case 'Y':
-                labelIndex = 32;
-                break;
-            case 'u':
-                labelIndex = 16;
-                break;
-            case 'i':
-                labelIndex = 17;
-                break;
-            case 'I':
-                labelIndex = 33;
-                break;
-            case 'o':
-                labelIndex = 18;
-                break;
-            case 'O':
-                labelIndex = 34;
-                break;
-            case 'p':
-                labelIndex = 19;
-                break;
-            case 'P':
-                labelIndex = 35;
-                break;
-            case 'a':
-                labelIndex = 20;
-                break;
-            default:
-                labelIndex = -1;
-        }
+        int labelIndex = switch (key) {
+            case '1' -> 0;
+            case '!' -> 21;
+            case '2' -> 1;
+            case '@' -> 22;
+            case '3' -> 2;
+            case '4' -> 3;
+            case '$' -> 23;
+            case '5' -> 4;
+            case '%' -> 24;
+            case '6' -> 5;
+            case '^' -> 25;
+            case '7' -> 6;
+            case '8' -> 7;
+            case '*' -> 26;
+            case '9' -> 8;
+            case '(' -> 27;
+            case '0' -> 9;
+            case 'q' -> 10;
+            case 'Q' -> 28;
+            case 'w' -> 11;
+            case 'W' -> 29;
+            case 'e' -> 12;
+            case 'E' -> 30;
+            case 'r' -> 13;
+            case 't' -> 14;
+            case 'T' -> 31;
+            case 'y' -> 15;
+            case 'Y' -> 32;
+            case 'u' -> 16;
+            case 'i' -> 17;
+            case 'I' -> 33;
+            case 'o' -> 18;
+            case 'O' -> 34;
+            case 'p' -> 19;
+            case 'P' -> 35;
+            case 'a' -> 20;
+            default -> -1;
+        };
         return labelIndex;
     }
 }

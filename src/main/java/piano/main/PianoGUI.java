@@ -34,4 +34,3 @@ public class PianoGUI extends JFrame {
         return keyboard;
     }
 }
-
