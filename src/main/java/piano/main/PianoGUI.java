@@ -10,6 +10,7 @@ import javax.sound.midi.MidiChannel;
 import javax.swing.*;
 
 public class PianoGUI extends JFrame {
+    public Keyboard keyboard;
 
     public PianoGUI(MidiChannel midiChannel, Recorder recorder) {
         setTitle("MY PIANO");
@@ -19,12 +20,14 @@ public class PianoGUI extends JFrame {
         JPanel root = new JPanel(new BorderLayout());
         root.setBackground(Color.BLACK);
 
+        keyboard = new Keyboard(midiChannel, recorder);
+
         root.add(new RecorderPanel(recorder), BorderLayout.NORTH);
-        root.add(new Keyboard(midiChannel, recorder), BorderLayout.CENTER);
+        root.add(keyboard, BorderLayout.CENTER);
         root.add(new InstrumentsPanel(midiChannel), BorderLayout.SOUTH);
         setContentPane(root);
 
-        root.addKeyListener(new KeyboardListener(recorder, midiChannel));
+        root.addKeyListener(new KeyboardListener(recorder, midiChannel, this));
         root.setFocusable(true);
     }
 }
