@@ -1,6 +1,7 @@
 package piano.main;
 
 import piano.instruments.InstrumentsPanel;
+import piano.keyboard.keyboardaudio.KeyboardListener;
 import piano.keyboard.keyboardui.Keyboard;
 import piano.recorder.Recorder;
 import piano.recorder.RecorderPanel;
@@ -23,5 +24,8 @@ public class PianoGUI extends JFrame {
         root.add(new InstrumentsPanel(midiChannel), BorderLayout.SOUTH);
         setContentPane(root);
 
-	}
+        root.addKeyListener(new KeyboardListener(recorder, midiChannel));
+        root.setFocusable(true);
+    }
 }
+
