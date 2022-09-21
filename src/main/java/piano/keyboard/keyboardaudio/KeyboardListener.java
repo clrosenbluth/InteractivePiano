@@ -21,7 +21,6 @@ public class KeyboardListener implements KeyListener {
     public void keyTyped(KeyEvent e) {
 
     }
-
     @Override
     public void keyPressed(KeyEvent e) {
         char key = e.getKeyChar();
@@ -36,14 +35,12 @@ public class KeyboardListener implements KeyListener {
             }
         }
     }
-
     @Override
     public void keyReleased(KeyEvent e) {
-
-        pianoLabel.setColorToDefaultColor();
-
+        if (pianoLabel != null) {
+            pianoLabel.setColorToDefaultColor();
+        }
     }
-
     private static int getPosition(char key) {
         int labelIndex;
         switch (key) {
