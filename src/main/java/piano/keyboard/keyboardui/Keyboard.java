@@ -6,6 +6,7 @@ import piano.main.MainFrameInterface;
 import piano.recorder.Recorder;
 import javax.sound.midi.MidiChannel;
 import javax.swing.*;
+import javax.swing.border.EmptyBorder;
 import java.awt.*;
 
 public class Keyboard extends JLayeredPane {
@@ -89,6 +90,7 @@ public class Keyboard extends JLayeredPane {
         if(index==39){
             pianoLabel.setText("•");
             pianoLabel.setVerticalAlignment(JLabel.BOTTOM);
+            pianoLabel.setBorder(new EmptyBorder(0, 0, 20, 0));
             pianoLabel.setFont(new Font("Serif", Font.BOLD, 20));
             pianoLabel.setForeground(color.RED);
         }
