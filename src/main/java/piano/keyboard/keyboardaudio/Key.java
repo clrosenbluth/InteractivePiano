@@ -4,7 +4,7 @@ import javax.sound.midi.MidiChannel;
 
 public class Key
 {
-	String[] noteNames = new String[] { "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B" };
+	static final String[] noteNames = new String[] { "C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B" };
 
 	private int pitch;
 	private String name;
