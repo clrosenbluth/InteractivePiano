@@ -7,6 +7,8 @@ import piano.recorder.Recorder;
 import javax.sound.midi.MidiChannel;
 import javax.swing.*;
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Keyboard extends JLayeredPane {
     private Colors colors;
@@ -14,6 +16,7 @@ public class Keyboard extends JLayeredPane {
     private Recorder recorder;
     private final int BACK_LAYER = 0;
     private final int FRONT_LAYER = 1;
+    private List<PianoLabel> pianoLabelList = new ArrayList<>();
 
     public Keyboard(MidiChannel midiChannel, Recorder recorder) {
         this.midiChannel = midiChannel;
@@ -76,5 +79,9 @@ public class Keyboard extends JLayeredPane {
         }
 
         add(pianoLabel);
+        pianoLabelList.add(pianoLabel);
+    }
+    public List<PianoLabel> getPianoLabelList() {
+        return pianoLabelList;
     }
 }
